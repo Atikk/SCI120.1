@@ -1,0 +1,166 @@
+	
+	
+	vector<double> vel(5);
+	vel[4] = 5.6;
+	vel.resize(3,0);
+	vel.clear();
+	vel.push_back(3);
+	vel.pop_back();
+	vel.push_back(-2);
+	vel.push_back(4);
+	vel.resize(12, 0);
+	vel.push_back(10);
+
+	int i = 0;
+	while (i < vel.size())
+	{
+		cout << vel[i] << ' ';
+		i = i + 1;
+	}
+
+	cout << endl;
+	cout << "size=" << vel.size() << endl;
+	cout << "size=" << vel.size() << endl;
+
+	string city;
+	string state = "New York";
+	string divider(40, '-');
+	city = "NYC";
+	string address = city + "," + state;
+	cout << address.length();
+	cout << address.assign(50,'0');
+	cout << address.substr(0,4);
+	cout << address.empty();
+	address[0];
+	------------------------------------------------------------
+	string sentence = "easy comes having worth nothing.";
+	vector<string> splitWords;
+
+	int p0 = 0;
+	int p = 0;
+	int lp = sentence.length() - 1;
+	while (p <= lp) {
+		if (sentence[p] == ' ' || p == lp) {
+			string word = sentence.substr(p0, p - p0);
+			splitWords.push_back(word);
+			p0 = p + 1;
+		}
+		p = p + 1;
+	}
+	while (!splitWords.empty())
+	{
+		cout << splitWords.back() << ' ';
+		splitWords.pop_back();
+	}
+	cout << endl;
+----------------------------------
+
+#include <iostream>
+#include <cmath>
+#include <string>
+#include "myLib.hpp"
+#include <vector>
+
+using namespace std;
+
+double avg;
+double percentDifference(double x_1, double x_2){
+if(avg == 0) {
+	cout << "Error: division by 0\n";
+	return -1;
+}
+return fabs((x_1 - x_2) / avg) * 100.;
+};
+double getVal(string prompt) {
+	cout << prompt << " ";
+	double v;
+	cin >> v;
+	return v;
+
+}
+int main()
+{
+	/*Exe1();Exe2();Exe3();Exe4();Exe5();Exe6();
+
+	Path
+	----
+	C:\Users\NINO.THOMAS96\source\repos\'C++ Project'\x64\Debug
+
+	*/
+	cout << "Enter experiment values:\n";
+	double x = getVal("x = ");
+	double y = getVal("y = ");
+	double dif = precentDifference(x, y);
+	if (dif >= 0) {
+		cout << "%Diff = " << dif << "%\n";
+	}
+};
+
+__________________________________________
+int main() {
+	/*Exe1();Exe2();Exe3();Exe4();Exe5();Exe6();
+
+	Path
+	----
+	C:\Users\NINO.THOMAS96\source\repos\'C++ Project'\x64\Debug
+
+	*/
+	cout << "Enter a file name:\n";
+	string fileNameString;
+	getline(cin, fileNameString);
+
+	ofstream fileOut;
+
+	fileOut.open(fileNameString);
+	fileOut << "Writing inside file\n";
+	fileOut << 7 * 8 << endl;
+	fileOut.close();
+};
+
+-----------------------------------------------------------
+#include <iostream>
+#include <cmath>
+#include <string>
+#include "myLib.hpp"
+#include <vector>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+	int a = 1;
+	int b = 3;
+	int c = 7;
+
+	cout << "Pick a letter: a, b, or c: ";
+	char letter;
+	cin >> letter;
+
+	int* ip = nullptr; // defines pointer to hcar ip and init to null pointer.
+	if (letter == 'a') { 
+		ip = &a; //get address of a and save in ip
+	}
+	if (letter == 'b') {
+		ip = &b;
+	}
+	if (letter == 'c')
+	{
+		ip = &c;
+	}
+	if (ip != nullptr) {
+		cout << "That has a value of "<< *ip << endl;
+	}
+};
+
+/*
+
+double x;
+cin >> x;
+int* p = nullptr;
+if(x>0){x = x^.5; p = &x;}
+if (p != nullptr){cout << “sqrt = “ << p << endl;
+else{cout<< “value is invalid”;}
+
+*/
+
+----------------------------------------------------
