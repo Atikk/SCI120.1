@@ -1,20 +1,13 @@
 #include <iostream>
-#include <cmath>
-#include <string>
+
+
 
 using namespace std;
 
 
 int Exe1()
 {
-	cout << "comment: Idk what this function does..";
-	int m = 4;
-	double cost = 5.72;
-	string name = "James Bond";
-
-	cout << "m=" << m << endl;
-	cout << "price=$" << cost << endl;
-	cout << name << endl;
-	cout << "end function"<<endl;
+	cout << "Most people are not just comfortable with their ignorance,\n but hostile to anyone who points it out.\n - Plato"
+		;
 	return 0;
 }

@@ -1,9 +1,4 @@
 #include <iostream>
-#include <cmath>
-#include <string>
-#include "myLib.hpp"
-#include <vector>
-#include <fstream>
 
 using namespace std;
 
