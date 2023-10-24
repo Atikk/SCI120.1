@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 int Exe6()
 {
 	double x;

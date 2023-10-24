@@ -138,7 +138,10 @@
     <ClCompile Include="Exercise7.cpp" />
     <ClCompile Include="Exercise8.cpp" />
     <ClCompile Include="Exercise9.cpp" />
+    <ClCompile Include="Lab00.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="structure.cpp" />
+    <ClCompile Include="tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myLib.hpp" />

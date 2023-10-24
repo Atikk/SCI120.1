@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int Exe5()
 {
 	double x;

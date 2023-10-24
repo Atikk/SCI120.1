@@ -165,3 +165,105 @@ else{cout<< “value is invalid”;}
 
 ----------------------------------------------------
 cout << int('M');
+
+-----------------------------------------------------
+10/19/23
+//#include <iostream>;
+//#include <string>;
+//using namespace std;
+//
+//int main() {
+//
+//	unsigned short num = 32767;
+//	
+//	cout << sizeof(num) << " bytes\n";
+//	cout << "max value computed " << pow(2, 8 * sizeof(num)) << endl;
+//	cout << num << endl;
+//	num = num + 1;
+//	cout << num << endl;
+//
+//	int big1 = 230;
+//	int big2 = 524;
+//
+//	int overflow = 7'000'000'000;
+//
+//	int ave1 = (big1 + big2) / 2;
+//	cout << "ave1 = " << ave1 << endl;
+//
+//	int ave2 = big1 + (big2 - big1) / 2;
+//	cout << "ave2 = " << ave2 << endl;
+//
+//	cout << overflow << endl;
+//
+//	double ok = 12;
+//
+//	static_cast<int>(ok);
+//
+//
+//
+//}
+
+// stoi example
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stoi
+#include<iomanip>
+#include<ctime>
+
+using namespace std;
+
+const double DEG2RAD = 3.14159 / 180.;
+const double RAD2DEG = 1. / DEG2RAD;
+struct Point {
+	double x, y;
+};
+double par_area(Point r1, Point r2)
+{
+	return r1.x * r2.y - r2.x * r1.y;
+
+}
+
+int main()
+{
+	struct StudentInfo {
+		string name;
+		char grade;
+	};
+	StudentInfo student_1{ "The name" };
+	student_1.name = "John Smith";
+	student_1.name += ", Jr.";
+	student_1.grade = 'A';
+
+	string underline;
+	underline.assign(student_1.name.length(), '-');
+
+	cout << endl;
+	cout << "Hello " << student_1.name;
+	cout << "     " << underline << endl;
+	cout << "Your name has " << student_1.name.length() << " letters and spaces\n";
+	cout << "Your grade is " << student_1.grade << endl;
+
+	double n_i = 1;
+	double n_r = 1.33;
+
+	double ang_i;
+	cout << "Enter angle of incidence: ";
+	cin >> ang_i;
+
+	double ang_r = asin((n_i / n_r) * sin(ang_i * DEG2RAD)) * RAD2DEG;
+
+	cout << fixed << setprecision(1);
+	cout << "Angle of refraction " << ang_r << " degrees\n";
+
+	//(sum j = 0 to m - 1 (Subscript[b,{j}]) * (Subscript[b,{j}] + 1) / 2)/((n / 2 * m)(n + 2m - 1))
+
+	int max = 6;
+	int num;
+	num = rand() % max + 1;
+	Point v1 = { 4, 4. };
+	Point v2 = { 1541., 3424324. };
+
+	cout << "area parallelogram = " << par_area(v1, v2) << endl;
+
+
+}
+---------------------------------------------------------------------------------
