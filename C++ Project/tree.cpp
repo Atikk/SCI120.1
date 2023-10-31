@@ -48,4 +48,5 @@ int tree(){
 	back.assign(margin, bgc);
 	string base = back + greeting + back;
 	cout << base << '\n';
+	return 0;
 };

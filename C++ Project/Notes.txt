@@ -267,3 +267,142 @@ int main()
 
 }
 ---------------------------------------------------------------------------------
+10/23/23
+--------------------------------------------------------------------------------
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+const int SIZE = 32000;
+
+void sqrt_ratio() {
+	float x, y;
+	cout << "Enter two numbers\n";
+	cin >> x >> y;
+	if (y != 0) {
+		float z = x / y;
+		if (z >= 0) { //nested if
+			cout << "sqrt(x/y = " << sqrt(z) << endl;
+		}
+		else {
+			cout << "cannot take square root of x/y" << z << endl;
+		}
+	}
+	else {
+		cout << "cannot divide by " << y << endl;
+	}
+}
+
+void compare_xy(int x, int y) {
+	cout << boolalpha;
+	cout << x << " != " << y << " ? " << (x != y) << endl;
+	bool xley = (x <= y);
+	cout << x << " <= " << y << " ? " << xley << endl;
+	cout << noboolalpha;
+
+}
+
+void getPosInt(int a)
+{
+	cout << "Input: " << a << endl;
+
+	if (a <= 0) {
+		a = SIZE;
+		cout << "Warning: invalid value\n";
+	}
+	cout << "Using " << a << endl;
+}
+
+void testParity(int number)
+{
+	cout << "Input: " << number << endl;
+	if (number % 2 == 0) {
+		cout << " is even\n";
+
+	}
+	else {
+		cout << " is odd\n";
+	}
+}
+
+int leg(float a) {
+	int ans;
+	if (a < 0) {
+		ans = -1;
+	}
+	else if (a > 0) {
+		ans = 1;
+	}
+	else {
+		ans = 0;
+	}
+	return ans;
+}
+
+void triOp(float x) {
+	cout << "Input: " << x << endl;
+	cout << "Output: " << leg(x) << endl;
+}
+
+int main() {
+
+	compare_xy(4, 5);
+	compare_xy(6, 6);
+	compare_xy(7, -7);
+
+
+	std::cout << "Printable ASCII [32..126]:\n";
+	for (char c{ ' ' }; c <= '~'; ++c)
+	std::cout << c << ((c + 1) % 32 ? ' ' : '\n');
+	std::cout << '\n';
+	getPosInt(7);
+	getPosInt(4);
+
+	bool notDone = true;
+	while (notDone) {
+		cout << "Enter one integer(0 to end): ";
+		int a;
+		cin >> a;
+		testParity(a);
+		if (!a) {
+			notDone = false;
+		}
+	}
+	float x = 4.99999;
+	float eps = 1E-5;
+	if (fabs(x-5.) <= eps)
+		cout << "ok\n";
+	else
+		cout << "not equal\n";
+	triOp(-6.8);
+	triOp(0.0);
+	triOp(45.1);
+
+}
+
+_______________________________________________________________________________________________
+10/31/23
+_______________________________________________________________________________________________
+#include<iostream>
+using namespace std;
+
+void range(int x,int x0, int x1) {
+	cout << "Is " << x << " in range ";
+	cout <<x0<<","<<x<<"]?\n";
+
+	if (x <= x1 && x >= x0) 
+		cout << " inside ";
+	else
+		cout << " outside";
+	if (!x)
+	cout << " zero\n";
+	else
+		cout << ",not zero\n";
+}
+
+int main() {
+	range(-4, 0, 10);
+	range(0, 0, 10);
+	range(5, 0, 10);
+	range(10, 0, 10);
+}

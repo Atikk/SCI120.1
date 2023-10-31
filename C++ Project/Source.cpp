@@ -1,26 +1,24 @@
 //#include <iostream>
-//#include <fstream>
-//#include <cstdlib>
-//#include <ctime>
-//#include<vector>
-//#include <string>
+//#include <vector>
 //using namespace std;
 //
-//int stuff() {
-//	ifstream inp("sci120students.txt");
-//	if (!inp)
-//	{
-//		cout << "cannot find file\n";
-//		exit()
-//	}
-//	vector<string> list;
-//	string name;
-//	while (inp >> name) {
-//		list.push_back(name);
-//	}
-//	int n = list.size();
-//	srand((unsigned)time(0));
-//	int r = rand() % n;
-//	cout << "Student " << list[r] << endl;
+//void menu2(vector<string> option)
+//{
+//	if (option.size() != 2) {
+//		cout << "Error: wrong size array\n";
+//		return;
+//	};
+//	cout << "Choose one: " << endl;
+//	cout << "A: " << option[0] << endl;
+//	cout << "B: " << option[1] << endl;
+//	char choice;
+//	choice = cin.get();
+//	cin.ignore(100, '\n');
+//
+//
+//};
+//
+//
+//int main() {
 //
 //}
