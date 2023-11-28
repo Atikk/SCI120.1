@@ -1,0 +1,7 @@
+﻿  BinomialCoefficient.cpp
+C:\Users\NINO.THOMAS96\source\repos\SCI120.1\SCI120.1-master\C++ Project\BinomialCoefficient.cpp(23,11): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\NINO.THOMAS96\source\repos\SCI120.1\SCI120.1-master\C++ Project\BinomialCoefficient.cpp(32,11): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\NINO.THOMAS96\source\repos\SCI120.1\SCI120.1-master\C++ Project\BinomialCoefficient.cpp(47,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Source.cpp
+  Generating Code...
+  C++ Project.vcxproj -> C:\Users\NINO.THOMAS96\source\repos\SCI120.1\SCI120.1-master\x64\Debug\C++ Project.exe
