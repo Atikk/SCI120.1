@@ -142,6 +142,7 @@
     <ClCompile Include="Lab00.cpp" />
     <ClCompile Include="BinomialCoefficient.cpp" />
     <ClCompile Include="Quadratic.cpp" />
+    <ClCompile Include="sawtooth.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="structure.cpp" />
     <ClCompile Include="tree.cpp" />

@@ -10,7 +10,7 @@ unsigned int binomial(int n, unsigned int k);
 void plotBinomial(int n, float mc = 40, char ch = '*');
 
 
-int main() {
+int binomial() {
     cout << "Enter number: ";
     unsigned int n = 10;
     cin >> n;

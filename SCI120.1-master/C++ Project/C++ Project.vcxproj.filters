@@ -69,6 +69,9 @@
     <ClCompile Include="gradientDescent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sawtooth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myLib.hpp">

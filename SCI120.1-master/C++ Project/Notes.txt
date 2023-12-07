@@ -204,8 +204,8 @@ cout << int('M');
 //}
 
 // stoi example
-#include <iostream>   // std::cout
-#include <string>     // std::string, std::stoi
+#include <iostream>   //  cout
+#include <string>     //  string,  stoi
 #include<iomanip>
 #include<ctime>
 
@@ -351,10 +351,10 @@ int main() {
 	compare_xy(7, -7);
 
 
-	std::cout << "Printable ASCII [32..126]:\n";
+	 cout << "Printable ASCII [32..126]:\n";
 	for (char c{ ' ' }; c <= '~'; ++c)
-	std::cout << c << ((c + 1) % 32 ? ' ' : '\n');
-	std::cout << '\n';
+	 cout << c << ((c + 1) % 32 ? ' ' : '\n');
+	 cout << '\n';
 	getPosInt(7);
 	getPosInt(4);
 
@@ -432,3 +432,76 @@ int main() {
 //int main() {
 //
 //}
+
+------------------------------------------------------------------------------------------------
+//#include <iostream>
+//#include <cmath>
+//using namespace std;
+//
+//class Vector2D {
+//	double x, y; 
+//public: 
+//	double get_x() { return x; };
+//	double get_y() { return y; };
+//	void set_x(double xx) { x = xx; };
+//	void set_y(double yy) { y = yy; };
+//	void setFromPolar(double rad, double ang, bool deg = true);
+//};
+//
+//
+//const double D2R = 3.14159 / 180.;
+//void Vector2D::setFromPolar(double rad, double ang, bool deg) {if() };
+
+
+
+-----------------------------------------------------------
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Vector2D {
+	double x, y; 
+public: 
+	double get_x() const { return x; };
+	double get_y() const { return y; };
+	void set_x(double xx) { x = xx; };
+	void set_y(double yy) { y = yy; };
+	void setFromPolar(double rad, double ang, bool deg = true);
+	double magnitude() const;
+	double angle() const;
+};
+
+
+const double D2R = 3.14159 / 180.;
+void Vector2D::setFromPolar(double rad, double ang, bool deg) {
+	if (deg) { ang *= D2R; x = rad * cos(ang); y = rad * sin(ang); };
+}
+double Vector2D::magnitude() const { return sqrt(x * x + y * y); }
+double Vector2D::angle() const { return atan2(y, x) / D2R; }
+
+Vector2D readVector2D();
+void display_properties(Vector2D const&);
+
+
+int main() { 
+auto vec = readVector2D();
+cout << "Vector coordinates:\n";
+display_properties(vec);
+vec.setFromPolar(7.,30.);
+display_properties(vec);
+return 0;
+
+}
+
+Vector2D readVector2D(){
+	double x, y; cout << "x y: "; cin >> x >> y; Vector2D vec; vec.set_x(x); vec.set_y(y); return vec;
+};
+
+void display_properties(Vector2D const& v) {
+	cout << "(x,y) =(" << v.get_x() << "," << v.get_y() << ")\n";
+	cout << "(mag,ang)=(" << v.magnitude() << "," << v.angle() << ")\n";
+
+}
